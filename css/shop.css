@@ -1,0 +1,335 @@
+@charset "utf-8";
+
+*,
+*:after,
+*::before {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+}
+
+h1 {
+    text-align: center;
+    margin-top: 8rem;
+    color: #54473F;
+}
+.orderform {
+    width: 75%;
+    margin: 3rem auto 0;
+}
+
+.basketdiv {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.basketdiv .row.head {
+    border-bottom: 2px solid #7E7975;
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-around;
+    color: #7E7975;
+}
+
+.basketdiv .data {
+    border-bottom: 1px dashed #888;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.basketdiv .data .empty {
+    text-align: center;
+}
+
+.subdiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+.basketdiv .row>.subdiv:nth-child(1) {
+    width: 50%;
+}
+
+.basketdiv .row>.subdiv:nth-child(2) {
+    width: 40%;
+}
+
+.basketdiv .row>.subdiv:nth-child(3) {
+    width: 10%;
+}
+
+.basketdiv2 .row>.subdiv:nth-child(1) {
+    width: 60%;
+}
+
+.basketdiv2 .row>.subdiv:nth-child(2) {
+    width: 40%;
+}
+
+.basketdiv .row>div>div {
+    display: block;
+    text-align: center;
+    margin: 0;
+    height: 80px;
+    line-height: 80px;
+}
+
+.basketdiv .row .subdiv .img img {
+    width: 70px;
+    margin-top: 5px;
+}
+
+.basketdiv .data .num .updown {
+    color: #7E7975;
+    font-size: 1.5em;
+    display:flex;
+    justify-content: center;
+}
+
+.basketdiv .data .num .updown input {
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: transparent;
+    font-size: 1.1rem;
+}
+
+.basketdiv .data .num .updown p {
+    padding-bottom: 10px;
+}
+
+.basketdiv .check {
+    width: 10%;
+}
+
+.basketdiv .check input[type="checkbox"] {
+    display: none
+}
+
+.basketdiv .check input[type="checkbox"] + label{
+    display:block;
+    width: 15px;
+    margin: 0 auto;
+    height: 15px;
+    line-height: 13px;
+    border:1px solid #707070;
+    position: relative;
+    margin-top: 30px;
+  }
+
+.basketdiv .check input[id="check1"]:checked + label::after{
+    content:'✔';
+    font-size: 17px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top:0;
+  }
+.basketdiv .check input[id="check2"]:checked + label::after{
+    content:'✔';
+    font-size: 17px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top:0;
+  }
+.basketdiv .check input[id="check3"]:checked + label::after{
+    content:'✔';
+    font-size: 17px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top:0;
+  }
+.basketdiv .check input[id="check4"]:checked + label::after{
+    content:'✔';
+    font-size: 17px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top:0;
+  }
+
+.basketdiv .img {
+    width: 20%;
+}
+
+.basketdiv .pname {
+    width: 70%;
+}
+
+.basketdiv2 .pname {
+    width: 80%;
+}
+
+.basketdiv .basketprice {
+    width: 33%;
+    color: #7E7975;
+    font-size: 1.2rem;
+}
+
+.basketdiv .num {
+    width: 33%;
+    min-width: 105px;
+}
+
+.basketdiv .sum {
+    width: 34%;
+    max-width: 80px;
+    color: #F0AA79;
+}
+
+.basketdiv .point {
+    width: 50%;
+}
+
+.basketdiv2 .basketprice {
+    width: 25%;
+}
+
+.basketdiv2 .num {
+    width: 25%;
+}
+
+.basketdiv2 .point {
+    width: 25%;
+}
+
+.basketdiv .basketcmd {
+    width: 100%;
+}
+
+.basketdiv .data .pname {
+    text-align: left;
+    color: #7E7975;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.basketdiv .data .subdiv .basketcmd a {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.basketdiv .data .sum{
+    font-size: 1.1rem;
+}
+
+.buttongroup {
+    padding: 11px 0;
+    margin: 50px 0;
+}
+
+.narrowbuttongroup {
+    margin: 15px 0;
+}
+
+.buttongroup.center {
+    text-align: center;
+}
+
+.buttongroup input[type=text],
+.buttongroup input[type=password] {
+    height: 30px;
+}
+
+.buttongroup button,
+.buttongroup a {
+    margin-right: 5px;
+}
+
+.buttongroup button:last-child,
+.buttongroup a:last-child {
+    margin-right: 0;
+}
+
+.abutton,
+.abutton:link,
+.abutton:visited,
+.abutton:active,
+input[type=button] {
+    border: none;
+    color: #7E7975;
+    cursor: pointer;
+    margin-left: 10px;
+    word-break: keep-all;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.basketrowcmd {
+    display: flex;
+    justify-content: end;
+    text-align: center;
+}
+
+.basketrowcmd .abutton {
+    background: #54473F;
+    color: #fff;
+    font-size: 1rem;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.abutton-alt {
+    background-color: #d3e2c6;
+}
+
+.blue {
+    color: #F0AA79;
+}
+
+.sumcount,
+.summoney {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.sumcount {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.summoney {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.buttongroup {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.buttongroup a {
+    text-decoration: none;
+    margin: 10px auto 0;
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.1rem;
+    color: #54473F;
+    background-color: #F0AA79;
+    text-align: center;
+    border-radius: 5px;
+}
+

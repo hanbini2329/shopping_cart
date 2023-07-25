@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Shopping Cart</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/shop.css">
+    <script src="./js/shop.js"></script>
+</head>
+
+<body>
+
+    <h1>My Shopping Cart</h1>
+    <form name="orderform" id="orderform" method="post" class="orderform" action="./result.php"
+        onsubmit="return false;">
+        <input type="hidden" name="cmd" value="order">
+        <div class="basketdiv" id="basket">
+            <div class="row head">
+                <div class="subdiv">
+                    <div class="check">Select</div>
+                    <div class="img">Image</div>
+                    <div class="pname">Product Details</div>
+                </div>
+                <div class="subdiv">
+                    <div class="basketprice">Price</div>
+                    <div class="num">Quantity</div>
+                    <div class="sum">Total</div>
+                </div>
+                <div class="subdiv">
+                    <div class="basketcmd">Delete</div>
+                </div>
+                <div class="split"></div>
+            </div>
+
+            <div class="row data">
+                <div class="subdiv">
+                    <div class="check">
+                        <input type="checkbox" name="buy" value="260" id="check1" checked=""
+                            onclick="javascript:basket.checkItem();">
+                        <label for="check1"></label>
+                    </div>
+                    <div class="img">
+                        <img src="./img/001.png">
+                    </div>
+                    <div class="pname">
+                        <span>롬앤 글래스팅 멜팅 밤 #오리지널</span>
+                    </div>
+                </div>
+                <div class="subdiv">
+                    <div class="basketprice">
+                        <input type="hidden" name="p_price" id="p_price1" class="p_price" value="9900">9,900원
+                    </div>
+                    <div class="num">
+                        <div class="updown">
+                            <p onclick="javascript:basket.changePNum(1);">
+                                <span class="fas fa-arrow-alt-circle-up up">+</span>
+                            </p>
+                            <input type="text" name="p_num1" id="p_num1" size="2" maxlength="4" class="p_num" value="2"
+                                onkeyup="javascript:basket.changePNum(1);">
+                            <p onclick="javascript:basket.changePNum(1);">
+                                <span class="fas fa-arrow-alt-circle-down down">-</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sum">19,800원</div>
+                </div>
+                <div class="subdiv">
+                    <div class="basketcmd">
+                        <a href="javascript:void(0)" class="abutton" onclick="javascript:basket.delItem();">&#10005;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row data">
+                <div class="subdiv">
+                    <div class="check">
+                        <input type="checkbox" name="buy" value="261" id="check2" checked=""
+                            onclick="javascript:basket.checkItem();">
+                        <label for="check2"></label>
+                    </div>
+                    <div class="img">
+                        <img src="./img/002.png">
+                    </div>
+                    <div class="pname">
+                        <span>롬앤 한올 브로우 카라</span>
+                    </div>
+                </div>
+                <div class="subdiv">
+                    <div class="basketprice">
+                        <input type="hidden" name="p_price" id="p_price2" class="p_price" value="8900">8,900원
+                    </div>
+                    <div class="num">
+                        <div class="updown">
+                            <p onclick="javascript:basket.changePNum(2);">
+                                <span class="fas fa-arrow-alt-circle-up up">+</span>
+                            </p>
+                            <input type="text" name="p_num2" id="p_num2" size="2" maxlength="4" class="p_num" value="1"
+                                onkeyup="javascript:basket.changePNum(2);">
+                            <p onclick="javascript:basket.changePNum(2);">
+                                <span class="fas fa-arrow-alt-circle-down down">-</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sum">8,900원</div>
+                </div>
+                <div class="subdiv">
+                    <div class="basketcmd">
+                        <a href="javascript:void(0)" class="abutton" onclick="javascript:basket.delItem();">&#10005;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row data">
+                <div class="subdiv">
+                    <div class="check">
+                        <input type="checkbox" name="buy" value="262" id="check3"
+                            onclick="javascript:basket.checkItem();">
+                        <label for="check3"></label>
+                    </div>
+                    <div class="img">
+                        <img src="./img/003.png">
+                    </div>
+                    <div class="pname">
+                        <span>롬앤 베어 레이어 팔레트</span>
+                    </div>
+                </div>
+                <div class="subdiv">
+                    <div class="basketprice">
+                        <input type="hidden" name="p_price" id="p_price3" class="p_price" value="21900">21,900원
+                    </div>
+                    <div class="num">
+                        <div class="updown">
+                            <p onclick="javascript:basket.changePNum(3);">
+                                <span class="fas fa-arrow-alt-circle-up up">+</span>
+                            </p>
+                            <input type="text" name="p_num3" id="p_num3" size="2" maxlength="4" class="p_num" value="1"
+                                onkeyup="javascript:basket.changePNum(3);">
+                            <p onclick="javascript:basket.changePNum(3);">
+                                <span class="fas fa-arrow-alt-circle-down down">-</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sum">21,900원</div>
+                </div>
+                <div class="subdiv">
+                    <div class="basketcmd">
+                        <a href="javascript:void(0)" class="abutton" onclick="javascript:basket.delItem();">&#10005;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="row data">
+                <div class="subdiv">
+                    <div class="check">
+                        <input type="checkbox" name="buy" value="262" id="check4" checked=""
+                            onclick="javascript:basket.checkItem();">
+                        <label for="check4"></label>
+                    </div>
+                    <div class="img">
+                        <img src="./img/004.png">
+                    </div>
+                    <div class="pname">
+                        <span>롬앤 베어 워터 쿠션</span>
+                    </div>
+                </div>
+                <div class="subdiv">
+                    <div class="basketprice">
+                        <input type="hidden" name="p_price" id="p_price4" class="p_price" value="20900">20,900원
+                    </div>
+                    <div class="num">
+                        <div class="updown">
+                            <p onclick="javascript:basket.changePNum(4);">
+                                <span class="fas fa-arrow-alt-circle-up up">+</span>
+                            </p>
+                            <input type="text" name="p_num4" id="p_num4" size="2" maxlength="4" class="p_num" value="1"
+                                onkeyup="javascript:basket.changePNum(4);">
+                            <p onclick="javascript:basket.changePNum(4);">
+                                <span class="fas fa-arrow-alt-circle-down down">-</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sum">20,900원</div>
+                </div>
+                <div class="subdiv">
+                    <div class="basketcmd">
+                        <a href="javascript:void(0)" class="abutton" onclick="javascript:basket.delItem();">&#10005;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-align basketrowcmd">
+            <a href="javascript:void(0)" class="abutton" onclick="javascript:basket.delCheckedItem();">선택상품 삭제</a>
+            <a href="javascript:void(0)" class="abutton" onclick="javascript:basket.delAllItem();">장바구니 비우기</a>
+        </div>
+
+        <div class="bigtext right-align sumcount" id="sum_p_num">상품개수: 4개</div>
+        <div class="bigtext right-align box blue summoney" id="sum_p_price">Total: 74,200원</div>
+
+        <div id="goorder" class="">
+            <div class="buttongroup center-align cmd">
+                <a href="javascript:void(0);">선택상품 주문</a>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
